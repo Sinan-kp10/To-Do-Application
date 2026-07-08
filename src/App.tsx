@@ -1,8 +1,10 @@
 import './App.css'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { Todo } from "./types/Todo"
+import { ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 
 function App() {
@@ -41,6 +43,20 @@ function App() {
     setEditingTodo(null)
   }
 
+  useEffect(()=>{
+
+    const today = new Date()
+
+    todos.forEach((todo) => {
+
+      const deadline = new Date(todo.deadline)
+
+      if(!todo.completed  && deadline < today ){
+        toast.warning(`${todo.title} is overdue!`)
+      }
+    })
+  },[todos])
+
   return(
     <div className="container">
       <div className="todo-card">
@@ -50,6 +66,7 @@ function App() {
 
         <TodoList todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} editTodo={editTodo}/>
       </div>
+      <ToastContainer position="top-right" autoClose={3000}/>
     </div>
   )
 }

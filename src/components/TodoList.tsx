@@ -25,9 +25,8 @@ function TodoList({ todos, deleteTodo, toggleComplete, editTodo }: TodoListProps
 
                 <div>
 
-                    <h3>{todo.title}</h3>
-
-                    <p>{todo.completed ? "✅ Completed" : `Deadline : ${todo.deadline}`}</p>
+                  <h3>{todo.title}</h3>
+                  <p>{todo.completed ? "✅ Completed" : new Date(todo.deadline) < new Date() ? "⚠ Overdue" : `Deadline : ${todo.deadline}`}</p>
 
                 </div>
 

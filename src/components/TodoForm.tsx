@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { Todo } from "../types/Todo";
+import { toast } from "react-toastify";
 
 interface TodoFromProps {
     addTodo : (title:string, deadline:string) => void,
@@ -24,7 +25,7 @@ function TodoForm ({addTodo, editingTodo, updateTodo}: TodoFromProps){
         e.preventDefault()
 
         if(!title.trim() || !deadline){
-            alert("plaease fill")
+            toast.error("Task and deadline required");
             return
         }
         if(editingTodo){
@@ -43,7 +44,7 @@ function TodoForm ({addTodo, editingTodo, updateTodo}: TodoFromProps){
         <form className="todo-form" onSubmit={handleSubmit}>
 
             <input type="text" placeholder="Enter your task" value={title} onChange={(e)=> setTitle(e.target.value)}/>
-            <input type="date" placeholder="Enter your task" value={deadline} onChange={(e)=> setDeadline(e.target.value)}/>
+            <input type="date" placeholder="Enter your task" value={deadline} onChange={(e)=> setDeadline(e.target.value)} min={new Date().toISOString().split("T")[0]}/>
             <button type="submit">{editingTodo ? "Update Task" : "Add Task"}</button>
 
         </form>
