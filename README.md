@@ -78,21 +78,6 @@ src
 
 ---
 
-## 🎯 React Concepts Covered
-
-- Functional Components
-- Props
-- State Management
-- useState
-- useEffect
-- Controlled Components
-- Conditional Rendering
-- Event Handling
-- List Rendering
-- CRUD Operations
-- TypeScript Interfaces
-
----
 
 ## ⚙️ Installation
 
