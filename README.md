@@ -1,75 +1,134 @@
-# React + TypeScript + Vite
+# 📝 React TypeScript Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Todo List application built with **React**, **TypeScript**, and **Vite**. This project demonstrates the core concepts of React including component-based architecture, state management, props, hooks, CRUD operations, and responsive UI design.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ✅ Add Todo
+- ✏️ Edit Todo
+- ❌ Delete Todo
+- ☑️ Mark Todo as Completed
+- 📅 Assign Deadlines
+- ⚠️ Highlight Overdue Tasks
+- 🔔 Toast Notifications for Overdue Tasks
+- 📱 Responsive Design
+- ⚛️ Built with React + TypeScript
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- React Hooks
+  - useState
+  - useEffect
+- React Toastify
+- CSS3
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Folder Structure
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src
+│
+├── components
+│   ├── TodoForm.tsx
+│   └── TodoList.tsx
+│
+├── types
+│   └── Todo.ts
+│
+├── App.tsx
+├── App.css
+├── main.tsx
+└── index.css
 ```
+
+---
+
+## 📸 Features
+
+### Add Todo
+
+- Add a new task with a deadline.
+
+### Edit Todo
+
+- Update existing tasks.
+
+### Delete Todo
+
+- Remove tasks permanently.
+
+### Complete Todo
+
+- Mark tasks as completed.
+
+### Deadline Management
+
+- Assign deadlines to each task.
+- Overdue tasks are highlighted.
+
+### Toast Notifications
+
+- Displays a warning notification when a task is overdue.
+
+---
+
+## 🎯 React Concepts Covered
+
+- Functional Components
+- Props
+- State Management
+- useState
+- useEffect
+- Controlled Components
+- Conditional Rendering
+- Event Handling
+- List Rendering
+- CRUD Operations
+- TypeScript Interfaces
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Sinan-kp10/To-Do-Application
+```
+
+Move into the project
+
+```bash
+cd todo-app
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the project
+
+```bash
+npm run dev
+```
+
+---
+## 👨‍💻 Author
+
+**Muhammed Sinan KP**
+
+GitHub: https://github.com/Sinan-kp10
+
+---
+
+## 📄 License
+
+This project is created for learning purposes.
