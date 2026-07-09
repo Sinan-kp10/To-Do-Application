@@ -2,7 +2,7 @@ import './App.css'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
 import { useState, useEffect } from 'react'
-import type { Todo } from "./types/Todo"
+import type { Todo } from "./types/models"
 import { ToastContainer } from 'react-toastify'
 import { toast } from 'react-toastify'
 

@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-import type { Todo } from "../types/Todo";
+import type { TodoFromProps } from "../types/models";
 import { toast } from "react-toastify";
 
-interface TodoFromProps {
-    addTodo : (title:string, deadline:string) => void,
-    editingTodo : Todo | null
-    updateTodo : ( id:number, title:string , deadline: string)=> void
-}
 
 function TodoForm ({addTodo, editingTodo, updateTodo}: TodoFromProps){
 
@@ -38,8 +33,6 @@ function TodoForm ({addTodo, editingTodo, updateTodo}: TodoFromProps){
         setDeadline("")
     }
 
-    
-    
     return (
         <form className="todo-form" onSubmit={handleSubmit}>
 

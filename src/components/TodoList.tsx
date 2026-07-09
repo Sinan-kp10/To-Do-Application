@@ -1,11 +1,4 @@
-import type { Todo } from "../types/Todo";
-
-interface TodoListProps {
-  todos: Todo[],
-  deleteTodo : (id:number)=> void,
-  toggleComplete : (id:number)=> void,
-  editTodo : (todo: Todo)=> void
-}
+import type { TodoListProps } from "../types/models";
 
 function TodoList({ todos, deleteTodo, toggleComplete, editTodo }: TodoListProps) {
   return (
