@@ -26,6 +26,7 @@ A modern Todo List application built with **React**, **TypeScript**, and **Vite*
   - useEffect
 - React Toastify
 - CSS3
+- Local Storage API
 
 ---
 
@@ -106,6 +107,32 @@ npm run dev
 ```
 
 ---
+
+# 🚀 Future Improvements
+
+The following features are planned for future versions:
+
+- 🌙 Dark / Light Theme
+- 🔍 Search Todos
+- 🏷️ Filter (All / Active / Completed)
+- 📊 Task Statistics
+- 📂 Categories & Tags
+- ⭐ Priority Levels (High, Medium, Low)
+- 🔃 Drag & Drop Task Reordering
+- ⏰ Reminder Notifications
+- 📆 Calendar View
+- 📈 Progress Bar
+- 📱 Progressive Web App (PWA)
+- 🔐 User Authentication
+- ☁️ Store Todos in MongoDB
+- 🌐 Express.js REST API
+- 👤 Multi-user Support
+- 📤 Export / Import Tasks
+- 🧪 Unit Testing with React Testing Library
+- 🎨 Better Animations & Transitions
+
+---
+
 ## 👨‍💻 Author
 
 **Muhammed Sinan KP**
