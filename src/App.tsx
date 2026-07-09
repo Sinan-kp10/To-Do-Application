@@ -22,7 +22,7 @@ function App() {
     }
 
     setTodos([...todos, newTodo])
-    toast.success(`${title} is Created!`)
+    toast.success(`"${title}" created successfully!`);
   }
 
   function deleteTodo(id:number){
@@ -40,7 +40,7 @@ function App() {
     setTodos(todos.map((todo)=>
       todo.id === id ? {...todo, title, deadline} : todo
     ))
-
+    toast.success(`"${title}" updated successfully!`);
     setEditingTodo(null)
   }
 
