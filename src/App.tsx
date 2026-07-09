@@ -22,6 +22,7 @@ function App() {
     }
 
     setTodos([...todos, newTodo])
+    toast.success(`${title} is Created!`)
   }
 
   function deleteTodo(id:number){
