@@ -9,7 +9,13 @@ import { toast } from 'react-toastify'
 
 function App() {
 
-  const [todos, setTodos] = useState<Todo[]>([])
+  const [todos, setTodos] = useState<Todo[]>(()=>{
+
+    const savedTodos = localStorage.getItem("todos")
+
+    return savedTodos ? JSON.parse(savedTodos) : []
+    
+  })
   const [editingTodo, setEditingTodo] = useState< Todo | null>(null)
 
   function addTodo(title: string, deadline:string){
@@ -50,6 +56,7 @@ function App() {
 
     todos.forEach((todo) => {
 
+      localStorage.setItem("todos", JSON.stringify(todos))
       const deadline = new Date(todo.deadline)
 
       if(!todo.completed  && deadline < today ){
