@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import type { TodoFromProps } from "../types/models";
 import { toast } from "react-toastify";
 
-
 function TodoForm ({addTodo, editingTodo, updateTodo}: TodoFromProps){
 
     const [title, setTitle] = useState("")
